@@ -4,5 +4,5 @@ import org.bson.types.ObjectId;
 
 import java.time.LocalDate;
 
-public record QuizDTO(ObjectId id ,String titreQuiz , String specialite , LocalDate dateQuiz ) {
+public record QuizDTO(String id ,String titreQuiz , String specialite , LocalDate dateQuiz ) {
 }

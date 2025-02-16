@@ -17,7 +17,7 @@ import java.time.Instant;
 public class BaseEntity implements Serializable {
 	@Id
 	@Setter(AccessLevel.NONE)
-	ObjectId id;
+	String id;
 
 	@CreatedDate
 	Instant createdAt;

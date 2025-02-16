@@ -6,29 +6,28 @@ import tn.starter.mongoShared.services.IGenericService;
 
 import java.util.List;
 
-public class GenericController<DTO,T,ID> {
-
+public class GenericController<T> {
 	@Autowired
-	IGenericService<DTO,T,ID> genericService;
+	IGenericService<T> genericService;
 
 	@PostMapping("/add")
-	public DTO add(@RequestBody DTO dto) {
+	public T add(@RequestBody T dto) {
 		return genericService.add(dto);
 	}
 	@PutMapping("/put")
-	public DTO update(@RequestBody DTO dto) {
+	public T update(@RequestBody T dto) {
 		return genericService.update(dto);
 	}
 	@GetMapping("/getById/{id}")
-	public DTO retrieveById(@PathVariable("id") ID id) {
+	public T retrieveById(@PathVariable("id") String id) {
 		return genericService.retrieveById(id);
 	}
 	@GetMapping("/getAll")
-	public List<DTO> retrieveAll() {
+	public List<T> retrieveAll() {
 		return genericService.retrieveAll();
 	}
 	@DeleteMapping("/delete/{id}")
-	public void delete(@PathVariable ID id) {
+	public void delete(@PathVariable String id) {
 		genericService.delete(id);
 	}
 }

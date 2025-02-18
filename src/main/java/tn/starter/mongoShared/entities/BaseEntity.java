@@ -2,7 +2,6 @@ package tn.starter.mongoShared.entities;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;

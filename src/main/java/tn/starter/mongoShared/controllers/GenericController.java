@@ -7,7 +7,6 @@ import tn.starter.mongoShared.services.IGenericService;
 import java.util.List;
 
 public class GenericController<T> {
-	// T:DTO
 
 	@Autowired
 	IGenericService<T> genericService;
